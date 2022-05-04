@@ -8,7 +8,7 @@ set number	" muestra numeros de linea
 " clipboards internos de vim
 " las siguientes lineas redefinen los atajos 
 " para copiar cortar y pegar usados normalmente
-set clipboard=unnamed
+set clipboard=unnamedplus
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
@@ -24,9 +24,15 @@ set expandtab          " Always uses spaces instead of tab characters (et).
 set softtabstop=0      " Number of spaces a <Tab> counts for. When 0, featuer is off (sts).
 set autoindent         " Copy indent from current line when starting a new line.
 set smarttab           " Inserts blanks on a <Tab> key (as per sw, ts and sts).
-   
+
+"Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+set termguicolors      " para poder habilitar colorized 
+
 set colorcolumn=80   " Linea limite a 80 espacios
-set foldcolumn=4     " Margen del lado izquierdo para centrar mas el codigo
+   set foldcolumn=4     " Margen del lado izquierdo para centrar mas el codigo
 
 let g:indent_guides_auto_colors=0
 
@@ -47,7 +53,14 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+"colorized plugin
+Plug 'norcalli/nvim-colorizer.lua'
+
 call plug#end() 
+
+" additional setup for norcalli
+lua require 'colorizer'.setup()
+
 
 " Theme por defecto usa el plug de nightfox
 colorscheme nordfox
@@ -89,7 +102,18 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ' :'
 
+" enable tabline
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#left_sep= ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+
 let g:airline_theme='base16_shell'
+" Always show tabs
+set showtabline=2
+" we don't need to see things like INSERT anynore
+
 
 " Barra de archivos lateral, configurada para abrirse y cerrarse con Control E
 let NERDTreeWinSize = 20
