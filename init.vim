@@ -32,7 +32,7 @@ vnoremap > >gv
 set termguicolors      " para poder habilitar colorized 
 
 set colorcolumn=80   " Linea limite a 80 espacios
-   set foldcolumn=4     " Margen del lado izquierdo para centrar mas el codigo
+set foldcolumn=4     " Margen del lado izquierdo para centrar mas el codigo
 
 let g:indent_guides_auto_colors=0
 
@@ -55,6 +55,12 @@ Plug 'vim-airline/vim-airline-themes'
 
 "colorized plugin
 Plug 'norcalli/nvim-colorizer.lua'
+
+" for git gthub configuration
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
 
 call plug#end() 
 
@@ -104,15 +110,21 @@ let g:airline_symbols.linenr = ' :'
 
 " enable tabline
 let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#left_sep= ''
+let g:airline#extensions#tabline#left_sep = '»'
+let g:airline#extensions#tabline#left_sep = ''
+
+"
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
+
+let g:airline#extensions#whitespace#enabled = 0 " Esto oculta el campo 
 
 let g:airline_theme='base16_shell'
 " Always show tabs
 set showtabline=2
 " we don't need to see things like INSERT anynore
+set noshowmode
 
 
 " Barra de archivos lateral, configurada para abrirse y cerrarse con Control E
