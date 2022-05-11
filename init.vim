@@ -56,11 +56,16 @@ Plug 'vim-airline/vim-airline-themes'
 "colorized plugin
 Plug 'norcalli/nvim-colorizer.lua'
 
-" for git gthub configuration
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-Plug 'junegunn/gv.vim'
+"Plug 'tpope/vim-rhubarb'
+"Plug 'junegunn/gv.vim'
+
+" permite mostrar las paginas markdown en el navegador incluidos fragmentos
+" mermaid
+Plug 'iamcco/markdown-preview.nvim'
+
+" iconos
 
 call plug#end() 
 
@@ -124,7 +129,7 @@ let g:airline_theme='base16_shell'
 " Always show tabs
 set showtabline=2
 " we don't need to see things like INSERT anynore
-set noshowmode
+"set noshowmode
 
 
 " Barra de archivos lateral, configurada para abrirse y cerrarse con Control E
@@ -142,3 +147,14 @@ inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
+
+" move among buffers with CTRL
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+nnoremap <Leader>b :ls<CR>:b<Space>
+nnoremap <Leader>1 :b 1<CR>
+nnoremap <Leader>2 :b 2<CR>
+nnoremap <Leader>3 :b 3<CR>
+nnoremap <Leader>4 :b 4<CR>
+nnoremap <Leader>5 :b 5<CR>
+nnoremap <Leader>6 :b 6<CR>
