@@ -1,0 +1,13 @@
+define matchpairs
+:set mps+=<:>
+:set mps+=x:y
+:set mps+=/:\
+
+
+El cursor multiple:
+Ctrl C y dejar pulsada la tecla de Ctrl mientras se usan las flechas de arriba o abajo para seleccionar los caracteres a seleccionar, Para deseleccionar caracteres se pulsa Q sobre el caracter a deseleccionar, con este metodo se ven los caracteres seleccionados de color rojo y siempre selecciona al menos dos.
+
+en modo normal con Ctrl N se selecciona toda la palabra debajo del cursor, si se vuelve a presionar Ctrl N se selecciona la siguiente ocurrencia de esa palabra igual que ocurre con Ctrl D en sublime, cada seleccion va a convertirse en un cursor al pasar al modo edicion. Si se quiere saltar una seleccion se pulsa q, y si se quiere deseleccionar una seleccion Q
+
+Un metodo mas preciso y comodo es colocarme en modo visual con Esc V, seguidamente pulsar Ctrl N, eso va a seleccionar unicamente un caracter, me desplazo a la siguiente posicion donde quiero insertar un cursor y presiono V para volverme a ubicar en modo visual y cuelvo a presionar Ctrl N
+

@@ -39,6 +39,7 @@ let g:indent_guides_auto_colors=0
 call plug#begin('~/AppData/Local/nvim/plugged')
 " Plugin para abrir el arbol de archivos lateral
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 " un tema
 Plug 'EdenEast/nightfox.nvim'
