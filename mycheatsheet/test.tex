@@ -4,7 +4,6 @@
 % TeX Format
 
 % compile as 'pdftex vimqrc.tex'
-
 \pdfoutput=1
 \pdfpageheight=21cm
 \pdfpagewidth=29.7cm
@@ -116,10 +115,12 @@ Completion, Folding, Compiling)
 \cm{f$c$ F$c$ }{next, previous occurence of character $c$}
 \cm{t$c$ T$c$ }{before next, previous occurence of $c$}
 \cm{; ,}{Repeat last f,t,F,T movement backward, fordward}
+\cm{. } {Repeat las change}
+\cm{* }{Read the word under the cursor and go to next ocurrence}
 \cm{zz}{Center line under cursor in the screen}
 
 
-\section{\bf{Insertion \& Replace $\to$ insert mode}}
+\section{\bf{Editing}}
 \cm{i a }{insert before, after cursor}
 \cm{I A }{insert at beginning, end of line}
 \cm{gI }{insert text in first column}
@@ -129,19 +130,21 @@ Completion, Folding, Compiling)
 \cm{gr$c$ }{like {\tt r}, but without affecting layout}
 \cm{R }{replace characters starting at the cursor}
 \cm{gR }{like {\tt R}, but without affecting layout}
+\cm{x X }{delete character under, before cursor}
 \cm{c$m$ }{change text of movement command $m$}
 \cm{cc\or S }{change current line}
 \cm{C }{change to the end of line}
-
-\section{Deletion}
-\cm{x X }{delete character under, before cursor}
+\cm{\ctrl n }{autocomplete next match before the cursor}
+\cm{\ctrl p }{autocomplete next match after the cursor}
+\cm{\ctrl rx }{Insert the contents of regiser x}
 \cm{d$m$ }{delete text of movement command $m$}
 \cm{dd D }{delete current line, to the end of line}
 \cm{J gJ }{join current line with next, without space}
-\cm{:$r$d } {delete range $r$ lines}
-\cm{:$r$d$x$ } {delete range $r$ lines into register $x$}
+\cm{gwip }{join current line with next, without space}
+\cm{g$\sim$ }{join current line with next, without space}
 
-\section{Insert Mode}
+
+\section{InsertInsert Mode}
 \cm{\ctrl V$c$ \ctrl V$n$ }{insert char $c$ literally, decimal value $n$}
 \cm{\ctrl V$n$ }{insert decimal value of character}
 \cm{\ctrl A }{insert previously inserted text}

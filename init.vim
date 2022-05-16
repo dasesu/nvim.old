@@ -29,6 +29,9 @@ set smarttab           " Inserts blanks on a <Tab> key (as per sw, ts and sts).
 vnoremap < <gv
 vnoremap > >gv
 
+" Para salvar con Ctrl s, aunque estoy mas acostumbrado a hacer :w
+nnoremap <C-s> :w<CR>
+
 set termguicolors      " para poder habilitar colorized 
 
 set colorcolumn=80   " Linea limite a 80 espacios
