@@ -87,7 +87,7 @@ Completion, Folding, Compiling)
 % Card content
 % Header
 %\hrule\vskip 3pt
-\title{VIM QUICK REFERENCE CARD}
+\title{VIM Cheat Sheets}
 
 \vskip 0.5cm
 \cm{:viusage }{Show a summary of all commands }
@@ -130,18 +130,12 @@ Completion, Folding, Compiling)
 \cm{gR }{like {\tt R}, but without affecting layout}
 \cm{x X }{delete character under, before cursor}
 \cm{c$m$ }{change text of movement command $m$}
-\cm{cc\or S }{change current line}
 \cm{C }{change to the end of line}
 \cm{\ctrl n }{autocomplete next match before the cursor}
 \cm{\ctrl p }{autocomplete next match after the cursor}
 \cm{\ctrl rx }{Insert the contents of regiser x}
 \cm{d$m$ }{delete text of movement command $m$}
-\cm{dd D }{delete current line, to the end of line}
 \cm{J gJ }{join current line with next, without space}
-\cm{gwip }{join current line with next, without space}
-\cm{g$\sim$ }{join current line with next, without space}
-\cm{gu }{Change to lowercase up to motion}
-\cm{gU }{Change to lowercase up to motion}
 \cm{s }{delete a character and substitute text}
 \cm{S }{delete a line and substitute text}
 \cm{xp }{tanspose two letters ab}
@@ -165,10 +159,13 @@ Completion, Folding, Compiling)
 
 
 %\vskip 0.4cm
-\section{Formatting/Filtering}
+\section{\bf{Formatting/Filtering}}
 $m$ is movement; leave out for visual mode commands \\
 \cm{gq$m$}{format $m$ ({\it formatprg})}
 \cm{gqgq \or gqip}{format current paragraph}
+\cm{gwip }{join current line with next, without space}
+\cm{g\tild{$m$} gu$m$ gU$m$ }{switch case, lc, uc on movement $m$}
+\cm{\tild }{switch case and advance cursor}
 \cm{$=m$}{reindent movement $m$ ({\it equalprg})}
 \cm{:$r$ce $w$ } {center lines in range $r$ to width $w$}
 \cm{:$r$le $i$ } {left align lines in range $r$ with indent $i$}
@@ -176,10 +173,9 @@ $m$ is movement; leave out for visual mode commands \\
 \cm{!$m$$c$\enter }{filter lines of movement $m$ through command $c$}
 \cm{$n$!!$c$\enter }{filter $n$ lines through command $c$}
 \cm{:$r$!$c$ } {filter range $r$ lines through command $c$}
-\cm{\tild }{switch case and advance cursor}
-\cm{g\tild{$m$} gu$m$ gU$m$ }{switch case, lc, uc on movement $m$}
 \cm{$<$$m$ $>$$m$ }{shift left, right text of movement $m$}
 \cm{$n$$<$\kern-3pt$<$ $n$$>$\kern-3pt$>$ }{shift $n$ lines left, right}
+\cm{>\% }{indent inner a block with () or \lapos\ \rapos }
 \cm{\ctrl A \ctrl X}{increment/decrement number under cursor}
 
 %\vskip 0.8cm
