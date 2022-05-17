@@ -115,9 +115,7 @@ Completion, Folding, Compiling)
 \cm{f$c$ F$c$ }{next, previous occurence of character $c$}
 \cm{t$c$ T$c$ }{before next, previous occurence of $c$}
 \cm{; ,}{Repeat last f,t,F,T movement backward, fordward}
-\cm{. } {Repeat las change}
-\cm{* }{Read the word under the cursor and go to next ocurrence}
-\cm{zz}{Center line under cursor in the screen}
+\cm{. }{Repeat las change}
 
 
 \section{\bf{Editing}}
@@ -142,35 +140,29 @@ Completion, Folding, Compiling)
 \cm{J gJ }{join current line with next, without space}
 \cm{gwip }{join current line with next, without space}
 \cm{g$\sim$ }{join current line with next, without space}
+\cm{gu }{Change to lowercase up to motion}
+\cm{gU }{Change to lowercase up to motion}
+\cm{s }{delete a character and substitute text}
+\cm{S }{delete a line and substitute text}
+\cm{xp }{tanspose two letters ab}
+\cm{u }{Undo}
+\cm{\ctrl r }{redo}
 
-
-\section{InsertInsert Mode}
-\cm{\ctrl V$c$ \ctrl V$n$ }{insert char $c$ literally, decimal value $n$}
-\cm{\ctrl V$n$ }{insert decimal value of character}
-\cm{\ctrl A }{insert previously inserted text}
-\cm{\ctrl @ }{same as {\tt\ctrl A} and stop insert $\to$ command mode}
-\cm{\ctrl R$x$ \ctrl R\ctrl R$x$ }{insert content of register $x$, literally}
-\cm{\ctrl N \ctrl P }{text completion before, after cursor}
-\cm{\ctrl W }{delete word before cursor}
-\cm{\ctrl U }{delete all inserted character in current line}
-\cm{\ctrl D \ctrl T }{shift left, right one shift width}
-\cm{\ctrl K$c_1$$c_2$\or $c_1$\kern-1pt\backspace$c_2$ }{enter digraph $\{c_1,c_2\}$}
-\cm{\ctrl O$c$ }{execute $c$ in temporary command mode}
-\cm{\ctrl X\ctrl E \ctrl X\ctrl Y }{scroll up, down}
-\cm{\key{esc}\or \ctrl\lbracket}{abandon edition $\to$ command mode}
 
 %\vskip 0.4cm
-\section{Search \& Substitution}
-\cm{/$s$\enter\ ?$s$\enter }{search forward, backward for $s$}
+\section{\bf{Search \& Substitution}}
+\cm{/pattern ?pattern}{search forward, backward for pattern}
 \cm{/$s$/$o$\enter\ ?$s$?$o$\enter }{search fwd, bwd for $s$ with offset $o$}
 \cm{n\or /\enter }{repeat forward last search}
 \cm{N\or ?\enter }{repeat backward last search}
 \cm{\# * }{search backward, forward for word under cursor}
 \cm{g\# g* }{same, but also find partial matches}
 \cm{gd gD }{local, global definition of symbol under cursor}
-\cm{:$r$s/$f$/$t$/$x$ } {substitute $f$ by $t$ in range $r$}
+\cm{:$r$s/old/new/$x$ } {substitute old by new in range $r$}
 \cn{$x:$ {\tt g}---all occurrences, {\tt c}---confirm changes}
 \cm{:$r$s $x$ } {repeat substitution with new $r$ \& $x$}
+\cm{:noh } {remove higlight matches}
+
 
 %\vskip 0.4cm
 \section{Formatting/Filtering}

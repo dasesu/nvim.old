@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdftex 2022.5.13)  16 MAY 2022 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdftex 2022.5.13)  16 MAY 2022 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,29 +7,21 @@ entering extended mode
 \fullhsize=\dimen16
 \leftcolumn=\box16
 \midcolumn=\box17
- [1{C:/Users/dases/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-[2]
+
+! I can't write on file `test.pdf'.
+(Press Enter to retry, or Control-C to exit; default file extension is `.pdf')
+Please type another file name for output: q
+[1{C:/Users/dases/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 Underfull \vbox (badness 10000) has occurred while \output is active
-\vbox(540.60236+2.5)x241.84842, glue set 32.21686
-.\glue(\topskip) 3.05556
-.\hbox(6.94444+1.94444)x241.84842, glue set 30.97113fill
+\vbox(540.60236+2.5)x241.84842
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x241.84842, glue set 36.54312fill
 ..\hbox(0.0+0.0)x0.0
 ..\tentt :
 ..\tentt s
-..\tentt h
-..\glue 5.24995
+..\tentt e
+..\tentt t
 ..etc.
-.\glue(\parskip) 0.0 plus 1.0
-.\glue(\baselineskip) 2.55556
-.\hbox(7.5+2.5)x241.84842, glue set 33.3765fill
-..\hbox(0.0+0.0)x0.0
-..\tentt K
-..\glue 5.24995
-..\cleaders 0.0 plus 1.0fill
-...\hbox(1.05554+0.0)x4.44441 []
-..\tenrm r
-..etc.
-.etc.
 
  [3] )<C:/Users/dases/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/dases/AppData/Local/Programs/MiKTeX/fonts/type1/public
@@ -37,15 +29,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active
 e1/public/amsfonts/cm/cmmi5.pfb><C:/Users/dases/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/dases/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/dases/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/dases/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dases/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
-s/dases/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb
-><C:/Users/dases/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mtt10.pfb>
-Output written on test.pdf (3 pages, 146671 bytes).
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dases/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dases
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Us
+ers/dases/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb>
+Output written on q.pdf (3 pages, 139816 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
