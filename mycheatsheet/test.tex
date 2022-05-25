@@ -87,7 +87,7 @@ Completion, Folding, Compiling)
 % Card content
 % Header
 %\hrule\vskip 3pt
-\title{VIM Cheat Sheets}
+\title{VIM CHEAT SHEETS}
 
 \vskip 0.5cm
 \cm{:viusage }{Show a summary of all commands }
@@ -114,8 +114,6 @@ Completion, Folding, Compiling)
 \cm{ngj ngk }{move cursor down, up n lines}
 \cm{f$c$ F$c$ }{next, previous occurence of character $c$}
 \cm{t$c$ T$c$ }{before next, previous occurence of $c$}
-\cm{; ,}{Repeat last f,t,F,T movement backward, fordward}
-\cm{. }{Repeat las change}
 
 
 \section{\bf{Editing}}
@@ -133,14 +131,11 @@ Completion, Folding, Compiling)
 \cm{C }{change to the end of line}
 \cm{\ctrl n }{autocomplete next match before the cursor}
 \cm{\ctrl p }{autocomplete next match after the cursor}
-\cm{\ctrl rx }{Insert the contents of regiser x}
 \cm{d$m$ }{delete text of movement command $m$}
 \cm{J gJ }{join current line with next, without space}
 \cm{s }{delete a character and substitute text}
 \cm{S }{delete a line and substitute text}
 \cm{xp }{tanspose two letters ab}
-\cm{u }{Undo}
-\cm{\ctrl r }{redo}
 
 
 %\vskip 0.4cm
@@ -159,7 +154,7 @@ Completion, Folding, Compiling)
 
 
 %\vskip 0.4cm
-\section{\bf{Formatting/Filtering}}
+\section{\bf{Formatting Filtering}}
 $m$ is movement; leave out for visual mode commands \\
 \cm{gq$m$}{format $m$ ({\it formatprg})}
 \cm{gqgq \or gqip}{format current paragraph}
@@ -175,46 +170,62 @@ $m$ is movement; leave out for visual mode commands \\
 \cm{:$r$!$c$ } {filter range $r$ lines through command $c$}
 \cm{$<$$m$ $>$$m$ }{shift left, right text of movement $m$}
 \cm{$n$$<$\kern-3pt$<$ $n$$>$\kern-3pt$>$ }{shift $n$ lines left, right}
-\cm{>\% }{indent inner a block with () or \lapos\ \rapos }
+\cm{>\% }{indent inner a block with () or {\tt\lapos} {\tt\rapos} }
+\cm{>at}{indent inner block with $<$~$>$ tags}
+\cm{n==}{re-indent n lines}
+\cm{$n\hskip -0.3em>$ $n\hskip -0.3em<$ $=$ }{indent/unindent $n$ levels, reindent}
 \cm{\ctrl A \ctrl X}{increment/decrement number under cursor}
 
+
+
 %\vskip 0.8cm
-\section{Visual Mode \& Text Objects}
+\section{\bf{Visual Mode \& Text Objects}}
 \cm{v V \ctrl V }{highlight characters, lines, block}
-\cm{o }{exchange cursor pos with start of highlighting}
+\cm{o O}{exchange cursor pos with start/end of highlighting}
 \cm{gv }{start highlighting on previous visual area}
 \cm{aw as ap }{select a word, a sentence, a paragraph}
 \cm{ab aB a] a$>$}{select a block ( ), {\tt\lapos} {\tt\rapos}, [~] $<$~$>$}
+\cm{iw is ip ib iB i] i$>$ it i" i' i`}{select ``inner''}
 \cm{at}{select an html tag}
 \cm{a" a' a`}{select a quotet string}
-\cm{iw is ip ib iB i] i$>$ it i" i' i`}{select ``inner''}
-\cm{$n\hskip -0.3em>$ $n\hskip -0.3em<$ $=$ }{indent/unindent $n$ levels, reindent}
+
+
+
 
 \vskip -0.2cm
-\section{Undoing, Repeating \& Registers}
+\section{\bf{Undoing, Repeating \& Registers}}
 \cm{u U }{undo last command, restore last changed line}
-\cm{.\thinspace\thinspace\ctrl R }{repeat last changes, redo last undo}
+\cm{\ctrl r }{redo}
+\cm{; ,}{Repeat last f,t,F,T movement backward, fordward}
+\cm{. }{Repeat las change}
 \cm{$n$.\ }{repeat last changes with count replaced by $n$ }
-\cm{q$c$ q$C$ }{record, append typed characters in register $c$}
+\cm{q$a$ }{record, append typed characters in register $a$}
 \cm{q }{stop recording}
-\cm{@$c$ }{execute the content of register $c$}
+\cm{@$a$ }{execute the content of register $a$}
 \cm{@@ }{repeat previous {\tt @} command}
-\cm{:@$c$ } {execute register $c$ as an {\it Ex\/} command}
+\cm{:@$a$ }{execute register $a$ as an {\it Ex\/} command}
+\cm{"$x$ }{use register $x$ for next delete, yank, put}
+\cm{"$xy$ }{Yank into register $x$}
+\cm{"$xp$ }{Paste content of register $x$}
+\cm{"$+y$ }{Yank into the system clipboard}
+\cm{"$+p$ }{Paste from the system clipboard}
+\cm{\ctrl rx }{Insert the contents of regiser x}
+\cm{:reg [$x$] } {show content registers/$x$ reg}
+
 
 
 \vskip -0.2cm
-\section{Copying (Yanking)}
-\cm{"$x$ }{use register $x$ for next delete, yank, put}
-\cm{:reg [$x$] } {show content registers/$x$ reg}
+\section{\bf{Copying (Yanking)}}
 \cm{y$m$ }{yank the text of movement command $m$}
 \cm{yy\or Y }{yank current line into register}
+\cm{y$`m$ }{Yank text to position of the mark}
 \cm{p P }{put register after, before cursor position}
 \cm{\rbracket p \lbracket p }{like {\tt p}, {\tt P} with indent adjusted}
 \cm{gp gP }{like {\tt p}, {\tt P} leaving cursor after new text}
 
 
 
-\section{Patterns (differences to Perl) ~~ {\tt :help pattern}}
+\section{\bf{Patterns (differences to Perl) ~~ {\tt :help pattern}}}
 \cm{\bs$<$ \bs$>$ }{start, end of word}
 \cm{\bs i \bs k \bs I \bs K }{an identifier, keyword; excl. digits}
 \cm{\bs f \bs p \bs F \bs P }{a file name, printable char.; excl. digits}
@@ -238,22 +249,23 @@ $m$ is movement; leave out for visual mode commands \\
 \cm{\bs\%{}V }{match inside visual area}
 \cm{\bs\tt'\rm m }{match with position of mark m}
 \cm{\bs\%(\bs) }{unnamed grouping}
-\cm{\bs\_$[$ $]$ }{collection with end-of-line included}
+\cm{\bs\_$[$ $]$ }{collection with end-of-line included} 
 \cm{\bs\%$[$ $]$ }{sequence of optionally matched atoms}
 \cm{\bs{}v }{very magic: patterns almost like perl}
 
 
 \vskip -0.2cm
-\section{Spell Checking}
+\section{\bf{Spell Checking}}
 \cm{:set spell spelllang=de\_20 } {activate spellcheck}
 \cm{$]$s }{next misspelled word}
 \cm{zg zG }{add good word (to internal word list)}
 \cm{zw zW }{mark bad word (to internal word list)}
 \cm{z= }{suggest corrections}
 
-\section{Marks, Motions, and Tags}
-\cm{m$c$ }{mark current position with mark $c\in[a..Z]$}
-\cm{`$c$ `$C$ }{go to mark $c$ in current, $C$ in any file}
+
+\section{\bf{Marks, Motions, and Tags}}
+\cm{m$a$ }{mark current position with mark $a\in[a..Z]$}
+\cm{`$a$ `$A$ }{go to mark $a$ in current, $A$ in any file}
 \cm{`\/`  `\/" }{go to position before jump, at last edit}
 \cm{`[ `] }{go to start, end of previously operated text}
 \cm{:marks } {print the active marks list}
@@ -266,8 +278,16 @@ $m$ is movement; leave out for visual mode commands \\
 \cm{gf }{open file which filename is under cursor}
 \cm{:tags } {print tag list}
 
-\section{Multiple Files / Buffers (\enter)}
+
+\section{\bf{Multiple Files / Buffers (\enter)}}
+\cm{:tabe }{open a new tab}
+\cm{gt or:tabn }{move to the next tab}
+\cm{gT or:tabp }{move to the previous tab}
+\cm{\#gt or :tabm \#}{go to tab number \#}
 \cm{:tab ball }{show buffer tablist}
+\cm{:tabdo}{run the command on all tabs eg. :tabdo wq -save and close all the tabs}
+\cm{:tabo}{close all tabs except for the current one}
+\cm{:tabc }{close the current tab and all its windows}
 \cm{:buffers }{show list of buffers}
 \cm{:buffer n }{switch to buffer n}
 \cm{:badd f.txt }{load file into new buffer}
@@ -275,8 +295,7 @@ $m$ is movement; leave out for visual mode commands \\
 \cm{:bnext :bprev :bfirst :blast }{buffer movement}
 
 
-
-\section{Scrolling \& Multi-Windowing}
+\section{\bf{Scrolling \& Multi-Windowing}}
 \cm{\ctrl d}{Move fordward $1/2$ page (\ctrl = Ctrl) }
 \cm{\ctrl u}{Move backward $1/2$ page (\ctrl = Ctrl) }
 \cm{\ctrl D \ctrl U \ctrl F \ctrl B}{scroll half / full page page down, up}
@@ -296,13 +315,11 @@ $m$ is movement; leave out for visual mode commands \\
 \cm{\ctrl Wc}{close window}
 
 \vskip -0.2cm
-\section{Misc Ex Commands (\enter) ~~ \tt{:help holy-grail}}
+\section{\bf{Misc Ex Commands (\enter) ~~ \tt{:help holy-grail}}}
 \cm{:e $f$ }{edit file $f$, reload current file if no $f$}
 \cm{:$r$~w $f$ }{write range $r$ to file $f$ (current file if no $f$)}
 \cm{:$r$~w$>$\kern-3pt$>$$f$ }{append range $r$ to file $f$}
 \cm{:$r$~g[!]/$p$/$cmd$ }{ex $cmd$ on range $r$ [not] matching $p$}
-\cm{:q :q! }{quit and confirm, quit and discard changes}
-\cm{:wq\or :x\or ZZ }{write to current file and exit}
 \cm{:r $f$ }{insert content of file $f$ below cursor}
 \cm{:r!\ $c$ }{insert output of command $c$ below cursor}
 \cm{:$r$c\ $a$ :$r$m\ $a$ }{copy, move range $r$ below line $a$}
@@ -310,7 +327,7 @@ $m$ is movement; leave out for visual mode commands \\
 
 
 \vskip -0.2cm
-\section{Ex Ranges}
+\section{\bf{Ex Ranges}}
 \cm{, ;\ }{separates two lines numbers, set to first line }
 \cm{$n$ }{an absolute line number $n$}
 \cm{.\thinspace\thinspace\thinspace\$ }{the current line, the last line in file}
@@ -321,7 +338,7 @@ $m$ is movement; leave out for visual mode commands \\
 
 
 \vskip -0.2cm
-\section{Completion}
+\section{\bf{Completion}}
 \cm{\ctrl{}X\ctrl{}L}{whole lines}
 \cm{\ctrl{}X\ctrl{}N \ctrl{}X\ctrl{}I}{keywords in current file, plus included files}
 \cm{\ctrl{}X\ctrl{}K \ctrl{}X\ctrl{}N}{keywords in dictionary, thesaurus}
@@ -331,7 +348,7 @@ $m$ is movement; leave out for visual mode commands \\
 
 
 
-\section{Folding}
+\section{\bf{Folding}}
 \cm{:set fdm=indent } {indent-foldmethod}
 \cm{zf$m$ }{create fold of movement $m$}
 \cm{:$r$fo }{create fold for range $r$}
@@ -344,18 +361,12 @@ $m$ is movement; leave out for visual mode commands \\
 \cm{zn zN zi }{fold non, fold normal, invert folding}
 \cm{:set foldcolumn=4 } {show foldcolumn}
 
-\section{Compiling}
-\cm{:compiler $c$ }{set/show compiler plugins}
-\cm{:make } {run {\tt makeprg}, jump to first error}
-\cm{:cope } {navigate errors from make}
-\cm{:cn :cp } {display the next, previous error}
-\cm{:cl :cf } {list all errors, read errors from file}
 
 
 
-\section{Miscellaneous}
+
+\section{\bf{Miscellaneous}}
 \cm{:sh :!$c$ } {start shell, execute command $c$ in shell}
-\cm{K }{run {\tt keywordprg} (man) on word under cursor}
 \cm{\ctrl L }{redraw screen}
 \cm{\ctrl G }{show cursor column, line, and character position}
 \cm{:set cuc } {show cursor column visually}
@@ -367,6 +378,7 @@ $m$ is movement; leave out for visual mode commands \\
 \cm{:set hlsearch } {highlight searches}
 \cm{:$r$hardcopy > file.ps }{print range to ps file}
 \cm{:set list }{show listchar characters (tabs etc.)}
+
 
 % Ending
 \supereject
