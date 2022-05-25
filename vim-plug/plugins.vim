@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Tema 
   Plug 'EdenEast/nightfox.nvim'
+  Plug 'joshdick/onedark.vim'
 
   "Para usar el cursor multiple
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
