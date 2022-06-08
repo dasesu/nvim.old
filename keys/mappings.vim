@@ -1,3 +1,17 @@
+" map es recursivo quiere decir que si como resultado de un mapeado hay la
+" entrada a otro map entonces continuara con el siguiente hasta terminar su
+" flujo 
+" noremap no es recursivo.
+"
+"    n: normal only
+"    v: visual and select
+"    o: operator-pending
+"    x: visual only
+"    s: select only
+"    i: insert
+"    c: command-line
+"    l: insert, command-line, regexp-search (and others. Collectively called "Lang-Arg" pseudo-mode)
+
 
 "Copiar, cortar y pegar
 vmap <C-c> "+yi
@@ -40,12 +54,49 @@ nnoremap <Leader>8 :b 8<CR>
 nnoremap <Leader>9 :b 9<CR>
 
 
-" show and hide NERDTree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-e> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 
 "nnoremap <Leader>l :!ls<CR>:b<Space>
+
+"PAra seleccionar todo
+map <C-a> :0<CR> v GG<CR>
+
+
+
+map <C-f> :Files<CR>
+map <leader>b :Buffers<CR>
+nnoremap <leader>f :FZF<CR>
+nnoremap <leader>l :BLines<CR>
+"nnoremap <leader>g :Rg<CR>
+nnoremap <leader>t :Tags<CR>
+nnoremap <leader>m :Marks<CR>
+ 
+ 
+
+" Para el manejo de sesiones
+" Para salvar sesiones
+" :mks! my-session.vim
+" o tambien
+" :mksession
+" Recuperar sesion 
+" :source ~/Session.vim
+" o tambien\
+" vim -S my-session.vim
+map <leader>z :mks! ~/vim-sessions/Session.vim<CR>
+"map <leader>z1 :mks! ~/vim-sessions/Session1.vim<CR>
+"map <leader>z2 :mks! ~/vim-sessions/Session2.vim<CR>
+"map <leader>z3 :mks! ~/vim-sessions/Session3.vim<CR>
+
+map <leader>o :so ~/vim-sessions/Session.vim<CR>
+"map <leader>o1 :so ~/vim-sessions/Session1.vim<CR>
+"map <leader>o2 :so ~/vim-sessions/Session2.vim<CR>
+"map <leader>o3 :so ~/vim-sessions/Session3.vim<CR>
+
+map <leader>d :!rm ~/vim-sessions/Session.vim<CR>
+"map <leader>d1 :!rm ~/vim-sessions/Session1.vim<CR>
+"map <leader>d2 :!rm ~/vim-sessions/Session2.vim<CR>
+"map <leader>d3 :!rm ~/vim-sessions/Session3.vim<CR>
+
 
