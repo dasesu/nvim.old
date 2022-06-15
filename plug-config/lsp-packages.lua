@@ -1,0 +1,11 @@
+require'lspconfig'.bashls.setup{}
+require'lspconfig'.clangd.setup{}
+require'lspconfig'.cssls.setup{}
+require'lspconfig'.dockerls.setup{}
+require'lspconfig'.html.setup{}
+require'lspconfig'.intelephense.setup{}
+require'lspconfig'.marksman.setup{}
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.sqlls.setup{}
+require'lspconfig'.texlab.setup{}
+require'lspconfig'.tsserver.setup{}

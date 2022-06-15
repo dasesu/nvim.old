@@ -2,5 +2,12 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/themes/style.vim
-source $HOME/.config/nvim/plugin-settings/makrdown-preview.vim
-source $HOME/.config/nvim/plugin-settings/floaterm.vim
+source $HOME/.config/nvim/plug-config/makrdown-preview.vim
+source $HOME/.config/nvim/plug-config/floaterm.vim
+source $HOME/.config/nvim/plug-config/transparent.vim
+luafile $HOME/.config/nvim/plug-config/lsp-installer.lua
+source $HOME/.config/nvim/plug-config/lsp-config.vim
+luafile $HOME/.config/nvim/plug-config/lsp-config.lua
+luafile $HOME/.config/nvim/plug-config/lsp-packages.lua
+luafile $HOME/.config/nvim/plug-config/treesitter.lua
+source $HOME/.config/nvim/plug-config/vsnip.vim

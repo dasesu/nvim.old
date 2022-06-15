@@ -9,8 +9,6 @@ set cmdheight=2               " More space for display messages
 set splitbelow                " Horizontal split will automatically be bellow
 set splitright                " Vertical split will automatically be to the right
 set conceallevel=0            " So thatIcan see in markdown files
-set tabstop=2                 " Insert 2 spaces for a tab
-set shiftwidth=2              " Change the number of space characters inserted for indentation
 set colorcolumn=80            " Linea limite a 80 espacios
 set foldcolumn=4              " Margen del lado izquierdo para centrar mas el codigo
 "set smarttab                  " Makes tabbing smarter will realize you have 2 vs 4
@@ -21,7 +19,9 @@ set laststatus=0              " Always display the status line
 set number                    " Show line number
 "set relativenumber
 "set cursorline                " 
-set showtabline=2             " always show tabs
+set tabstop=3                 " Insert 2 spaces for a tab
+set shiftwidth=3              " Change the number of space characters inserted for indentation
+set showtabline=3             " always show tabs
 set showmatch                 " nos muestra donde terminan parentesis
 set noshowmode                " no need to see the current mode INSERT
 set nobackup                  " recommended by coc
